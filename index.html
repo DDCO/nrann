@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NRANN</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <p>Draw a number from 0-9 in the canvas below.</p>
+        <canvas id="myCanvas" width="240" height="300"></canvas>
+        <div class="row">
+            <span id="result">0</span>
+            <button id="clearBtn" type="button">Clear</button>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+	<script src="js/ai.js"></script>
+	<script src="js/draw.js"></script>
+  </body>
+</html>

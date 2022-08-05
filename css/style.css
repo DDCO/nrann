@@ -1,0 +1,10 @@
+#myCanvas {
+    border: 1px solid black;
+}
+#result {
+    border: 1px solid black;
+    padding: 1px 89px;
+}
+.row {
+    width: 240px;
+}
