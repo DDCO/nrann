@@ -1,3 +1,3 @@
 function classify (image) {
- return 9;
+ return Math.floor(Math.random() * 10);
 };

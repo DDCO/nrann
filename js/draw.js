@@ -40,5 +40,6 @@ canvas.addEventListener('mouseout', (event) => {
 
 clearBtn.addEventListener('click', (event) => {
     context.clearRect(0, 0, canvas.width, canvas.height);
+    result.innerText = '-';
     console.log(event);
 })
