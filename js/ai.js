@@ -59,17 +59,18 @@ function getModel() {
   return model;
 }
 
-const model = getModel();
+let model = getModel();
 
-async function train() {
+async function train(size) {
   const metrics = ['loss', 'val_loss', 'acc', 'val_acc'];
   const container = {
     name: 'Model Training', tab: 'Model', styles: { height: '1000px' }
   };
   
   const BATCH_SIZE = 512;
-  const TRAIN_DATA_SIZE = 5500;
-  const TEST_DATA_SIZE = 1000;
+  const TRAIN_DATA_SIZE = size;
+  const TEST_DATA_SIZE = 10000
+  ;
 
   const [trainXs, trainYs] = tf.tidy(() => {
     const d = data.nextTrainBatch(TRAIN_DATA_SIZE);
@@ -112,3 +113,11 @@ function classify (image) {
   testxs.dispose();
   return predictions.arraySync()[0];
 };
+
+function save () {
+  model.save('downloads://nrann-model');
+}
+
+async function load () {
+  model = await tf.loadLayersModel('http://nrann-cdn.s3.amazonaws.com/nrann-model.json');
+}

@@ -10,9 +10,13 @@
   </head>
   <body>
     <main>
-        <button id="trainBtn" type="button">Train Model</button>
+        <input id="trainSize" type="number" step="1000" value="5000"/>
+        <button id="trainBtn" type="button">Train Model</button><br/><br/>
+        <button id="saveBtn" type="button">Save Model</button>
+        <button id="loadBtn" type="button">Load Model</button>
         <p>Draw a number from 0-9 in the canvas below.</p>
-        <canvas id="myCanvas" width="280" height="280"></canvas>
+        <canvas id="myCanvas" width="200" height="200"></canvas>
+        <canvas id="hiddenCanvas" style="display: none;" width="28" height="28"></canvas>
         <div class="row">
             <span id="result">-</span>
             <button id="clearBtn" type="button">Clear</button>
